@@ -1,12 +1,18 @@
-#include <SFML/Graphics.hpp>
+#pragma once
+#include "imported_libraries.h"
+#include "welcomewindow.h"
+using namespace std;
 
 int main()
 {
-	sf::RenderWindow window( sf::VideoMode( { 200, 200 } ), "SFML works!" );
-	sf::CircleShape shape( 100.f );
-	shape.setFillColor( sf::Color::Green );
+	//opening config.cfg file, taking window size values, rendering window object
+	void extractConfigValues();
 
-	while ( window.isOpen() )
+
+
+
+
+	while (welcomeWindow.isOpen())
 	{
 		while ( const std::optional event = window.pollEvent() )
 		{

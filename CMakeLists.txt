@@ -13,7 +13,12 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(project3 src/main.cpp)
+add_executable(project3 src/main.cpp
+        src/welcomewindow.cpp
+        src/welcomewindow.h
+        src/TextureManager.cpp
+        src/TextureManager.h
+        src/imported_libraries.h)
 target_compile_features(project3 PRIVATE cxx_std_17)
 target_link_libraries(project3 PRIVATE SFML::Graphics)
 
